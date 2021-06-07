@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Hotel Login</title>
+
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- Stylesheet -->
+    <link href="form.css" rel='stylesheet' type='text/css' />
+    <!-- //Stylesheet -->
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+
+    <!-- // fonts-->
+    <a href="connect.php">connect</a>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row">
+                <img src="images/Logo.png" class="logo">
+            </div>
+        </nav>
+    </header>
+    <!--background-->
+    <h1> Login</h1>
+    <div class="bg-agile">
+        <div class="book-appointment">
+            <h2>Login Here</h2>
+            <form action="login.php" method="POST">
+                <div class="book-form agileits-login">
+                    <form action="#" method="POST">
+                        <div class="agileits_reservation_grid" style="display: flex;flex-direction: column;">
+                            <div class="phone_email">
+                                <div class="form-text">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <input type="text" name="userName" placeholder="User name" required=""
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="phone_email phone_email1">
+                                <div class="form-text">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <input type="text" name="password" placeholder="Password" required=""
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <input type="submit" name="submit" value="Login">
+
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!--Calendar -->
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+        });
+    </script>
+    <!-- //Calendar -->
+
+</body>
+
+</html>

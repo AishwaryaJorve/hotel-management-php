@@ -1,0 +1,67 @@
+<?php
+
+      
+    $server='localhost';
+    $username="root";
+    $password="";
+    $db='hotel_database';
+
+$con=mysqli_connect($server,$username,$password,$db);
+if ($con) {
+// echo "connection successful";
+echo "Connection successful"
+
+}else{
+die("no connection".mysqli_connect_error());
+}
+
+
+
+$records = mysqli_query($con,"SELECT * FROM hotels_table"); // fetch data from database
+
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display all records from Database</title>
+  </head>
+  <body>
+    <h2>Employee Details</h2>
+
+    <table border="2">
+      <tr>
+        <td>Sr.No.</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Phone number</td>
+        <td>Email</td>
+        <td>Arrival Date</td>
+        <td>Daparature Date</td>
+        <td>No of guest</td>
+        <td>Room type</td>
+      </tr>
+      <?php
+      while($data = mysqli_fetch_array($records)) { 
+
+        ?>
+      <tr>
+        <td><?php echo $data ?></td>
+        <td><?php echo $data['id']; ?></td>
+        <td><?php echo $data['firstname']; ?></td>
+        <td><?php echo $data['lastname']; ?></td>
+        <td><?php echo $data['phonenumber']; ?></td>
+        <td><?php echo $data['email']; ?></td>
+        <td><?php echo $data['arrivaldate']; ?></td>
+        <td><?php echo $data['departuredate']; ?></td>
+        <td><?php echo $data['noofguest']; ?></td>
+        <td><?php echo $data['room type']; ?></td>
+      </tr>
+      <?php
+      }
+   ?>
+    </table>
+
+    <?php mysqli_close($con); // Close connection ?>
+  </body>
+</html>
